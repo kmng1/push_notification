@@ -1,0 +1,15 @@
+{
+	"name": "Notification App",
+	"short_name": "Notification",
+	"description": "Push notification demo",
+	"start_url": "/index.html",
+	"display": "standalone",
+	"gcm_sender_id": "1064785938885",
+	"icons": [
+		{
+			"src": "/images/notification.png",
+			"type": "image/png",
+			"sizes": "256x256"
+		}
+	]
+}
