@@ -1,35 +1,16 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="WebPushApp">
+<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Push example</title>
-
-		<link rel="manifest" href="/manifest.json">
-
-		<script src="/bower_components/jquery/dist/jquery.js"></script>
-		<script src="/bower_components/angular/angular.js"></script>
-
-		<script>
-			if ("serviceWorker" in navigator) {
-				console.info("Installing service worker");
-				navigator.serviceWorker.register("/service-worker.js")
-					.then(function() { console.info("Service worker installed"); })
-					.catch(function(err) { console.error("Failed to install service worker: %s", err); });
-			}
-		</script>
-
-		<script src="/index.js"></script>
-
+		<title></title>
 	</head>
-	<body ng-controller="WebPushCtrl as webPushCtrl">
+	<body>
 
-		<h2>Endpoint: <code>{{ webPushCtrl.endpoint }}</code></h2>
-		<h2>Key: <code>{{ webPushCtrl.p256dh }}</code></h2>
-		<h2>Auth: <code>{{ webPushCtrl.auth }}</code></h2>
+		<h1>Push Notification</h1>
 
-		<br> <br>
+		<h2><a href="/register.html">Register</a></h2>
 
-		<button id="regButton" ng-click="webPushCtrl.register()">Register</button>
-
+		<h2><a href="/push.html">Push</a></h2>
+		
 	</body>
 </html>

@@ -14,6 +14,7 @@ var dumpHeader = function(e) {
 		console.log("%s = %s", i, e[i]);
 }
 
+/*
 self.addEventListener("install", function(e) {
 	console.info("[service-worker] install");
 	e.waitUntil(
@@ -48,6 +49,7 @@ self.addEventListener("fetch", function(e) {
 			})
 	)
 });
+*/
 
 self.addEventListener("push", function(e) {
 	console.info("[service-worker] push event ==========");
