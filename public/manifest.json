@@ -4,7 +4,7 @@
 	"description": "Push notification demo",
 	"start_url": "/index.html",
 	"display": "standalone",
-	"gcm_sender_id": "1064785938885",
+	"gcm_sender_id": "__YOUR_FIREBASE_SENDER_ID_HERE__",
 	"icons": [
 		{
 			"src": "/images/notification.png",

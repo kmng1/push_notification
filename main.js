@@ -3,7 +3,7 @@ const webPush = require("web-push");
 const bodyParser = require("body-parser");
 const express = require("express");
 
-const serverKey = "AAAA9-owCcU:APA91bHwveapdCUPCCBF8zJTF4upKhpBjnA9nmbAK_zLmX955bV6emuixlk8vLDXx2l6p-tfarthyvVpnUlMdUxKZuJIu7K1Vefjr8y-Ab4vn1vSOh2dIGgnbKb2IPVmm7d88U8dzIkg";
+const serverKey = "__YOUR_FIREBASE_SERVER_KEY_HERE__";
 
 const app = express();
 const vapidDetails = webPush.generateVAPIDKeys();
