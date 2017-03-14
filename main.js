@@ -49,13 +49,7 @@ app.get("/push", function(req, res) {
 	var msgTemplate = {
 		to: "",
 		collapse_key: "abc",
-		data: { key0: "some_pointer: " + new Date() },
-		tag: { key0: "another link: " + new Date() },
-		notification: {
-			title: "You've got message",
-			body: req.query.message,
-			data: { key0: "some_pointer: " + new Date() },
-		}
+		data: { message: req.query.message },
 	}
 
 	for (var i in regs) {

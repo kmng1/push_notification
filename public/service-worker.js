@@ -53,17 +53,19 @@ self.addEventListener("fetch", function(e) {
 
 self.addEventListener("push", function(e) {
 	console.info("[service-worker] push event ==========");
-	var data = e.data.json();
+	var payload = e.data.json();
+
+	console.log(">>> payload = %s", JSON.stringify(payload));
 
 	var options = {
-		body: data.body || "*** This is a push message ***",
+		body: payload.data.message || "*** This is a push message ***",
 		icon: "images/notification.png",
 		badge: "images/badge.png"
 	};
 
-	console.info(">>> data = ", data);
+	//console.info(">>> data = ", data);
 
-	dumpHeader(e);
+	//dumpHeader(e);
 
 	e.waitUntil(self.registration.showNotification("Push demo", options));
 });
@@ -71,11 +73,11 @@ self.addEventListener("push", function(e) {
 self.addEventListener("notificationclick", function(e) {
 	console.info("[service-worker] clicked notification");
 
-	dumpHeader(e);
+	//dumpHeader(e);
 
-	console.info("\n========================");
+	//console.info("\n========================");
 
-	dumpHeader(e.notification);
+	//dumpHeader(e.notification);
 
 	e.notification.close();
 
